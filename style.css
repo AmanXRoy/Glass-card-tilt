@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body
+{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container::before
+{
+    content: '';
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(red,yellow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(50% at left 5%);
+}
+
+.container::after
+{
+    content: '';
+    height: 500px;
+    width: 500px;
+    background: linear-gradient(rgb(0, 26, 255),rgb(255, 0, 234));
+    position: absolute;
+    right: 0px;
+    bottom :0px;
+    clip-path: circle(50% at right 50%);
+   
+}
+
+.card
+{
+    
+    height: 450px;
+    width: 350px;
+    box-shadow: 5px 10px 15px 20px rgb(0, 0, 0);
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0.4;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    border-top: 2px solid rgba(255, 255, 255, 0.555);
+    border-left: 2px solid rgba(255, 255, 255, 0.555);;
+}
+
+
+
+
+.card h2
+{
+    padding-left: 90px;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 8rem;
+    color: rgb(255, 255, 255);
+    position: relative;
+   
+   
+}
+
+.card h3
+{
+   
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.card p
+{
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and(max-width:768px)
+{
+    .container
+    {
+        height: 500px;
+        width: 450px;
+    }
+
+}
